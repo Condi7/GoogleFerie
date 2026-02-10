@@ -29,3 +29,11 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
         - Sostituire il parametro APPROVER_EMAIL con la mail aziendale del responsabile delle ferie
         - Sostituire il paremetro SHEET_NAME con il nome del **foglio** (non del **file**!) Google
         - Se necessario, è possibile modificare il testo e l'oggetto delle mail automaticamente generate ed inviate (leggere il codice e modificare dove viene indicato dai commenti)
+
+    - III-D - Inserire due nuovi attivatori (trigger) dalla barra sinistra di Google Scripts, andando a modificare **SOLO** i parametri "Scegli quale funzione eseguire" e "Seleziona il tipo di evento":
+
+        - **Primo trigger**: Scegli quale funzione eseguire: onFormSubmit(), Seleziona il tipo di evento: All'invio del modulo
+        - **Secondo trigger**: Scegli quale funzione eseguire: onEdit(). Selezione il tipo di evento: Alla modifica
+     
+        - **Nota**: Vanno quindi lasciati invariati i campi "Viene eseguito durante il deployment" (sempre **head**), e "Seleziona l'origine dell'evento" (sempre "**Da foglio di lavoro**).
+        - La frequenza con la quale vengono inviate notifiche via mail riguardo gli incident dei trigger è personale, e non va ad influire sul codice.
