@@ -23,6 +23,7 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
 - III - **Inserire e modificare lo script**
     - III-A - Dal foglio Google delle risposte, cliccare su "Estensioni" e poi su "Google Scripts"
     - III-B - Creare un nuovo file e copiare il codice presente su questa repository
+              (**ATTENZIONE!** - Il seguente script funziona solamente se vengono rispettati i parametri indicati in precedenza, altrimenti                 bisognerà cambiare gli indici nel codice per farli                     combaciare ai campi del form diversi da quanto indicato sopra.)
     - III-C - Cambiare i primi tre parametri presenti nel file con quelli corretti, per farlo:
         
         - Aprire Google Calendar, creare un nuovo calendario, e dalle opzioni del calendario appena creato cliccare su "Opzioni e condivisione", copiare l'id del calendario e incollarlo nello script nel parametro           CALENDAR_ID
