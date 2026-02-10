@@ -20,6 +20,7 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
     - II-A - Nel form appena creato cliccare su "Risposte" e creare un foglio Google collegato al form (ovviamente questo passo deve essere fatto da chi ha creato il form)
     - II-B - Aggiungere le colonne "Stato", "Data approvazione" e "Data rifiuto"
     - II-C - Nella colonna "Stato" mettere dei valori fissi in un elenco a discesa (**CAMPI OBBLIGATORI** = In attesa, Approvata, Rifiutata, Annullata - è possibile aggiungere altri stati in seguito, ma dovranno               essere implementati nello script per fare in modo che funzionino correttamente)
+    - II-D - Creare un foglio di nome "Archivio"
 
 - III - **Inserire e modificare lo script**
     - III-A - Dal foglio Google delle risposte, cliccare su "Estensioni" e poi su "Google Scripts"
@@ -46,6 +47,13 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
 - Suggerimento di formula per ottenere questo (se i nomi delle colonne coincidono con quelli sopracitati): 
 - =SE(O(A2=""; B2=""); ""; SOMMA.PIÙ.SE('Risposte del modulo 1'!$N$2:$N; 'Risposte del modulo 1'!$B$2:$B; A2; 'Risposte del modulo 1'!$C$2:$C; B2))
 
-# Funzionalità in fase di sviluppo (10/02/2026 - 16:09)
-- Un foglio archivio che raccoglie tutte le richieste di ferie già concluse, in modo tale da tenere pulita la tabella con le nuove richieste.
-- Lo stato della richiesta "annullata"
+# Nuove features del 10/02/2026
+
+- **Implementato l'archivio**
+- **Creato un nuovo foglio per la visualizzazione veloce delle ore totali di ferie e permessi**
+
+# Funzionalità in fase di sviluppo (10/02/2026 - 17.53)
+- Lo stato della richiesta "archiviata"
+- Possibilità di avere diversi approvatori delle ferie e dei permessi.
+- Visualizzazione mensile delle ore di ferie e permessi per ogni dipendente.
+- Funzione onOpen() per archiviare automaticamente le richieste di ferie che sono scadute.
