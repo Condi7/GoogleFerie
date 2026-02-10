@@ -19,6 +19,7 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
 - II - **Creare il foglio Google, partendo dal form appena creato**
     - II-A - Nel form appena creato cliccare su "Risposte" e creare un foglio Google collegato al form (ovviamente questo passo deve essere fatto da chi ha creato il form)
     - II-B - Aggiungere le colonne "Stato", "Data approvazione" e "Data rifiuto"
+    - II-C - Nella colonna "Stato" mettere dei valori fissi in un elenco a discesa (**CAMPI OBBLIGATORI** = In attesa, Approvata, Rifiutata, Annullata - è possibile aggiungere altri stati in seguito, ma dovranno               essere implementati nello script per fare in modo che funzionino correttamente)
 
 - III - **Inserire e modificare lo script**
     - III-A - Dal foglio Google delle risposte, cliccare su "Estensioni" e poi su "Google Scripts"
@@ -38,3 +39,13 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
      
         - **Nota**: Vanno quindi lasciati invariati i campi "Viene eseguito durante il deployment" (sempre **head**), e "Seleziona l'origine dell'evento" (sempre "**Da foglio di lavoro**).
         - La frequenza con la quale vengono inviate notifiche via mail riguardo gli incident dei trigger è personale, e non va ad influire sul codice.
+
+# Features aggiuntive
+-  Visto che tutto il programma rimane gestibile dal foglio Google, possono essere implementati dei fogli aggiuntivi che possono tornare utili agli admin.
+- Un primo esempio potrebbe essere un foglio con il totale delle ore suddivise per nome e cognome del richiedente, in modo tale da vedere il totale ore di ferie e permessi effettuati da ogni dipendente.
+- Suggerimento di formula per ottenere questo (se i nomi delle colonne coincidono con quelli sopracitati): 
+- =SE(O(A2=""; B2=""); ""; SOMMA.PIÙ.SE('Risposte del modulo 1'!$N$2:$N; 'Risposte del modulo 1'!$B$2:$B; A2; 'Risposte del modulo 1'!$C$2:$C; B2))
+
+# Funzionalità in fase di sviluppo (10/02/2026 - 16:09)
+- Un foglio archivio che raccoglie tutte le richieste di ferie già concluse, in modo tale da tenere pulita la tabella con le nuove richieste.
+- Lo stato della richiesta "annullata"
