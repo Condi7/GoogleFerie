@@ -47,10 +47,12 @@ Un piccolo programma di gestione delle ferie, scritto utilizzando gli strumenti 
 - Suggerimento di formula per ottenere questo (se i nomi delle colonne coincidono con quelli sopracitati): 
 - =SE(O(A2=""; B2=""); ""; SOMMA.PIÙ.SE('Risposte del modulo 1'!$N$2:$N; 'Risposte del modulo 1'!$B$2:$B; A2; 'Risposte del modulo 1'!$C$2:$C; B2))
 
-# Nuove features del 10/02/2026
+# Cosa c'è di nuovo?
 
 - **Implementato l'archivio**
 - **Creato un nuovo foglio per la visualizzazione veloce delle ore totali di ferie e permessi**
+- **Eseguito refactoring del codice**
+- **Inserito controllo sul form, per evitare che vengano inviati nomi, cognomi od email con uno spazio all'inizio o alla fine (questo creerebbe dei problemi nel foglio Google)**
 
 # Funzionalità in fase di sviluppo (10/02/2026 - 17.53)
 - Lo stato della richiesta "archiviata"
